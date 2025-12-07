@@ -4720,3 +4720,142 @@ input, select, textarea {
 		}
 
 	}
+
+/* Lightbox Styling */
+
+	.lightbox {
+		display: none;
+		position: fixed;
+		z-index: 1000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.85);
+		-moz-animation: fadein 0.2s ease-out;
+		-webkit-animation: fadein 0.2s ease-out;
+		-ms-animation: fadein 0.2s ease-out;
+		animation: fadein 0.2s ease-out;
+	}
+
+	.lightbox.active {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.lightbox-content {
+		max-width: 90%;
+		max-height: 80vh;
+		object-fit: contain;
+		-moz-animation: zoomin 0.2s ease-out;
+		-webkit-animation: zoomin 0.2s ease-out;
+		-ms-animation: zoomin 0.2s ease-out;
+		animation: zoomin 0.2s ease-out;
+	}
+
+	.lightbox-close {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		color: #ffffff;
+		font-size: 3rem;
+		font-weight: bold;
+		cursor: pointer;
+		-moz-transition: color 0.2s ease-out;
+		-webkit-transition: color 0.2s ease-out;
+		-ms-transition: color 0.2s ease-out;
+		transition: color 0.2s ease-out;
+	}
+
+	.lightbox-close:hover {
+		color: #18bfef;
+	}
+
+	.lightbox-caption {
+		color: #ffffff;
+		margin-top: 1rem;
+		text-align: center;
+		font-size: 0.9rem;
+	}
+
+	@-moz-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@-ms-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@-moz-keyframes zoomin {
+		from {
+			-moz-transform: scale(0.8);
+			opacity: 0;
+		}
+		to {
+			-moz-transform: scale(1);
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes zoomin {
+		from {
+			-webkit-transform: scale(0.8);
+			opacity: 0;
+		}
+		to {
+			-webkit-transform: scale(1);
+			opacity: 1;
+		}
+	}
+
+	@-ms-keyframes zoomin {
+		from {
+			-ms-transform: scale(0.8);
+			opacity: 0;
+		}
+		to {
+			-ms-transform: scale(1);
+			opacity: 1;
+		}
+	}
+
+	@keyframes zoomin {
+		from {
+			transform: scale(0.8);
+			opacity: 0;
+		}
+		to {
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
